@@ -6,7 +6,6 @@ pip install ruqia
 ```
 ## Use
 ```
-from ruqiya.ruqiya import clean_text
 from ruqiya import ruqiya
 
 text="""
