@@ -1,5 +1,9 @@
 # Ruqia lib
-This library used for Arabic NLP to process, prepare and clean the Arabic text
+This library used for Arabic NLP to process, prepare and clean the Arabic text   
+
+
+مكتبة مخصصة لخدمة معالجة اللغة العربية وتشمل عدد من الوظائف لتنظيف النصوص وغيرها
+
 ## Install
 ```
 pip install ruqia
@@ -11,8 +15,8 @@ from ruqiya import ruqiya
 ## Example
 ```
 text="""
-!!أهلا وسهلا بك في الإصدار الأول من مكتبة رقيا
-هل هي المرة الأولى التي تستخدم فيها المكتبة؟!!
+!!أهلا وسهلا بك 👋 في الإصدار الأول من مكتبة رقيا
+هل هي المرة الأولى التي تستخدم فيها المكتبة😀؟!!
 """
 ```
 ## Clean the text. It includes all functions
@@ -48,5 +52,12 @@ print(text_cleaned5)
 ```
 text_cleaned6=ruqiya. remove_stop_words(text)
 print(text_cleaned6)
+
+```
+## Remove emojis
+
+```
+text_cleaned7=ruqiya. remove_emojis(text)
+print(text_cleaned7)
 
 ```
