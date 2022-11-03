@@ -1,7 +1,8 @@
 # general things to ignore
 build/
 dist/
-src/
+package_data.dat
+__init__.py
 .github/
 data/
 tests/
