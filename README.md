@@ -12,7 +12,19 @@ pip install ruqia
 ```
 from ruqiya import ruqiya
 ```
-#
+## Example: Apply a Function to Pandas Single Column
+
+```
+from ruqiya.ruqiya import clean_text
+
+# Often df['text'] be Object not String, so we need to apply str 
+df['text']=df['text'].apply(str)
+# Now apply our function
+df['cleaned_text']=df['text'].apply(clean_text)
+# Show the result
+df['cleaned_text']
+```
+
 ## All Functions
 
 ## Clean the text 
@@ -158,4 +170,25 @@ print('===========remove_URLs===========')
 text_cleaned12=ruqiya.remove_URLs(text)
 print(text_cleaned12)
 
+```
+
+## Example 2: Apply a Function to Pandas DataFrame (Single Column)
+
+```
+from ruqiya.ruqiya import clean_text
+import pandas as pd
+
+data="https://raw.githubusercontent.com/Ruqyai/data4test/main/test_with_lables.csv"
+df=pd.read_csv(data)
+df['text']=df['poem_text']
+
+#--------------------
+# Often df['text'] be Object not String, so we need to apply str 
+df['text']=df['text'].apply(str)
+# Now apply our function
+df['cleaned_text']=df['text'].apply(clean_text)
+#--------------------
+
+# Show the result
+df['cleaned_text']
 ```
