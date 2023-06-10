@@ -1,4 +1,4 @@
-# Ruqia lib
+# Ruqia Library
 This library used for Arabic NLP to process, prepare and clean the Arabic text   
 
 
@@ -191,4 +191,14 @@ df['cleaned_text']=df['text'].apply(clean_text)
 
 # Show the result
 df['cleaned_text']
+```
+# Citing Ruqia
+If Ruqia helps your research, we appreciate your citations. Here is the BibTeX entry:   
+```
+@misc{Ruqia2022,
+  title={Ruqia-Library},
+  author={Ruqiya Bin Safi},
+  year={2022},
+  howpublished={\url{https://github.com/Ruqyai/Ruqia-Library}},
+}
 ```
