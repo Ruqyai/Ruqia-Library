@@ -1,21 +1,12 @@
 # general things to ignore
 build/
 dist/
-package_data.dat
-__init__.py
-.github/
-data/
-tests/
 *.egg-info/
 *.egg
 *.py[cod]
 __pycache__/
 *.so
 *~
-setup.cfg
-setup.py
-pyproject.toml
-tox.ini
 # due to using tox and pytest
 .tox
 .cache

@@ -1,6 +1,7 @@
 import re
 import string
 from ruqiya.stopwords import stop_words_ar
+from ruqiya.replace_words_dict import replace_words_dict
 
 ############### initial variables and lists ##################
 
@@ -81,9 +82,29 @@ def remove_punctuations(text):
     return text.translate(translator)
 
 
+
 def remove_repeating_char(text):
-    """ remove the `repeating character` from the `text` ."""
-    return re.sub(r'(.)\1+', r'\1', text)
+    """
+    Removes duplicate characters within words and replaces words in the text based on a dictionary.
+    
+    Args:
+    text (str): The input text.
+
+    Returns:
+    str: The processed text with duplicate characters removed and words replaced according to the dictionary.
+    """
+    words = text.split()
+
+    processed_words = []
+    for word in words:
+        processed_word = re.sub(r'(.)(\1+)', r'\1', word)
+        if processed_word in replace_words_dict:
+            processed_word = replace_words_dict[processed_word]
+        processed_words.append(processed_word)
+
+    processed_text = ' '.join(processed_words)
+    return processed_text
+
 
 
 def read_stop_words():
